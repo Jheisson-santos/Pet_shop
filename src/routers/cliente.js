@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', cliente.index)
 router.get('/:id', cliente.show)
 router.post('/', cep, cliente.store)
-router.put('/:id', cliente.update)
+router.put('/:id', cep, cliente.update)
 router.delete('/:id', cliente.destroy)
 
 export default router
