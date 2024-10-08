@@ -11,7 +11,7 @@ const store = async (req,res)=>{
 
 const index = async (req,res)=>{
     try{
-        const connect = await Animal.find()
+        const connect = await Animal.find().populate("dono", "nome").exec()
         res.status(200).json(connect)
     }catch(err){
         console.log(err);
